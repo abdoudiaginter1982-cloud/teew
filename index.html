@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <title>TÉEW — Dépannage Rapide</title>
 
@@ -10,6 +12,9 @@
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet/dist/leaflet.css"/>
 
 <style>
 
@@ -36,7 +41,7 @@ HEADER
 ========================= */
 
 header{
-background:linear-gradient(135deg,#071426,#0b2545,#13315c);
+background:linear-gradient(135deg,#020617,#061224,#0a192f);
 padding:16px 8%;
 display:flex;
 justify-content:space-between;
@@ -62,7 +67,7 @@ padding:5px;
 }
 
 .logo h2{
-color:#ffb703;
+color:#f59e0b;
 font-size:28px;
 }
 
@@ -107,10 +112,10 @@ transparent 30%),
 
 linear-gradient(
 135deg,
-#071426 0%,
-#0b2545 35%,
-#13315c 70%,
-#1d4e89 100%
+#020617 0%,
+#061224 35%,
+#0a192f 70%,
+#102544 100%
 );
 
 display:flex;
@@ -122,8 +127,6 @@ color:white;
 position:relative;
 overflow:hidden;
 }
-
-/* EFFETS DESIGN */
 
 .hero::before{
 content:'';
@@ -151,8 +154,6 @@ filter:blur(60px);
 animation:floatTwo 10s ease-in-out infinite;
 }
 
-/* PETITES LIGNES DESIGN */
-
 .hero .lines{
 position:absolute;
 width:100%;
@@ -166,8 +167,6 @@ linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
 background-size:50px 50px;
 pointer-events:none;
 }
-
-/* CONTENU */
 
 .hero-content{
 position:relative;
@@ -198,8 +197,6 @@ margin-left:auto;
 margin-right:auto;
 opacity:0.92;
 }
-
-/* ANIMATIONS */
 
 @keyframes floatOne{
 
@@ -233,8 +230,6 @@ transform:translateY(0px);
 
 }
 
-/* RESPONSIVE */
-
 @media(max-width:768px){
 
 .hero h1{
@@ -258,22 +253,22 @@ BUTTONS
 .btn,
 button{
 display:inline-block;
-padding:15px 32px;
+padding:14px 28px;
 border:none;
-border-radius:14px;
-background:linear-gradient(135deg,#ffb703,#fb8500);
+border-radius:12px;
+background:linear-gradient(135deg,#d97706,#b45309);
 color:white;
 font-weight:600;
 text-decoration:none;
 cursor:pointer;
 transition:0.3s;
-box-shadow:0 10px 25px rgba(251,133,0,0.3);
+box-shadow:0 4px 12px rgba(0,0,0,0.18);
 }
 
 .btn:hover,
 button:hover{
-transform:translateY(-3px);
-opacity:0.95;
+transform:translateY(-2px);
+opacity:0.92;
 }
 
 /* =========================
@@ -460,7 +455,7 @@ FOOTER
 ========================= */
 
 footer{
-background:#071426;
+background:#020617;
 color:white;
 padding:35px;
 text-align:center;
@@ -511,19 +506,26 @@ font-size:30px;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<!-- =========================
-HEADER
-========================= -->
-
 <header>
 
 <div class="logo">
+
 <img src="logo.png" alt="Logo TÉEW">
+
+<div>
 <h2>TÉEW</h2>
+
+<p style="font-size:12px; color:#cbd5e1; margin-top:-5px;">
+Toujours proche quand l’urgence appelle.
+</p>
+
+</div>
+
 </div>
 
 <div class="menu-btn" id="menuBtn">
@@ -543,12 +545,10 @@ HEADER
 
 </header>
 
-<!-- =========================
-HERO
-========================= -->
-
 <section class="hero">
+
 <div class="lines"></div>
+
 <div class="hero-content">
 
 <h1>Trouvez un artisan rapidement à Thiès</h1>
@@ -568,10 +568,6 @@ Demander une intervention
 
 </section>
 
-<!-- =========================
-SLOGAN
-========================= -->
-
 <section class="slogan-section">
 
 <h2>
@@ -583,10 +579,6 @@ TÉEW modernise le dépannage au Sénégal grâce à la géolocalisation, la rap
 </p>
 
 </section>
-
-<!-- =========================
-HOW
-========================= -->
 
 <section id="how">
 
@@ -622,10 +614,6 @@ HOW
 
 </section>
 
-<!-- =========================
-SERVICES
-========================= -->
-
 <section id="services">
 
 <h2 class="title">Nos Services</h2>
@@ -651,10 +639,6 @@ SERVICES
 
 </section>
 
-<!-- =========================
-MAP
-========================= -->
-
 <section>
 
 <h2 class="title">Carte & Géolocalisation</h2>
@@ -670,10 +654,6 @@ Votre position sera détectée automatiquement.
 </div>
 
 </section>
-
-<!-- =========================
-REQUEST
-========================= -->
 
 <section id="request">
 
@@ -715,10 +695,6 @@ Envoyer la demande
 </div>
 
 </section>
-
-<!-- =========================
-ARTISAN
-========================= -->
 
 <section id="artisan">
 
@@ -766,10 +742,6 @@ Rejoindre TÉEW
 
 </section>
 
-<!-- =========================
-REVIEWS
-========================= -->
-
 <section id="avis">
 
 <h2 class="title">Avis Clients</h2>
@@ -806,10 +778,6 @@ Publier l’avis
 </div>
 
 </section>
-
-<!-- =========================
-CONTACT
-========================= -->
 
 <section id="contact">
 
@@ -851,10 +819,6 @@ CONTACT
 
 </section>
 
-<!-- =========================
-FOOTER
-========================= -->
-
 <footer>
 
 <p>
@@ -863,9 +827,7 @@ FOOTER
 
 </footer>
 
-<!-- =========================
-FIREBASE
-========================= -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
 <script type="module">
 
@@ -880,26 +842,18 @@ onSnapshot
 }
 from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
-/* =========================
-FIREBASE CONFIG
-========================= */
-
 const firebaseConfig = {
-  apiKey: "AIzaSyBmPfd7vFg3yJTB3ccn9DNfR1EVZ6keZL4",
-  authDomain: "teew-fae25.firebaseapp.com",
-  projectId: "teew-fae25",
-  storageBucket: "teew-fae25.firebasestorage.app",
-  messagingSenderId: "818520531218",
-  appId: "1:818520531218:web:204bf5ba0a2857be1193cb",
-  measurementId: "G-61ER1554X9"
+apiKey: "AIzaSyBmPfd7vFg3yJTB3ccn9DNfR1EVZ6keZL4",
+authDomain: "teew-fae25.firebaseapp.com",
+projectId: "teew-fae25",
+storageBucket: "teew-fae25.firebasestorage.app",
+messagingSenderId: "818520531218",
+appId: "1:818520531218:web:204bf5ba0a2857be1193cb",
+measurementId: "G-61ER1554X9"
 };
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-
-/* =========================
-MENU
-========================= */
 
 const menuBtn = document.getElementById('menuBtn');
 const navMenu = document.getElementById('navMenu');
@@ -911,65 +865,61 @@ navMenu.classList.toggle('active');
 });
 
 /* =========================
-GOOGLE MAPS
+OPENSTREETMAP + GEOLOCALISATION
 ========================= */
 
-window.initMap = function(){
+window.addEventListener('load', () => {
 
-if(navigator.geolocation){
+const locationText =
+document.getElementById('locationText');
 
-navigator.geolocation.getCurrentPosition((position)=>{
+if (navigator.geolocation) {
+
+navigator.geolocation.getCurrentPosition(
+
+(position) => {
 
 const lat = position.coords.latitude;
 const lng = position.coords.longitude;
 
-const userLocation = {lat,lng};
+locationText.innerHTML =
+`📍 Position détectée : ${lat.toFixed(5)}, ${lng.toFixed(5)}`;
 
-document.getElementById('locationText').innerHTML =
-`Position détectée : Latitude ${lat.toFixed(4)} / Longitude ${lng.toFixed(4)}`;
+const map = L.map('map').setView([lat, lng], 15);
 
-const map = new google.maps.Map(
-document.getElementById('map'),
+L.tileLayer(
+'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 {
-zoom:15,
-center:userLocation,
-
-styles:[
-{
-featureType:"all",
-elementType:"geometry",
-stylers:[{color:"#0b2545"}]
-},
-{
-featureType:"road",
-elementType:"labels.text.fill",
-stylers:[{color:"#ffffff"}]
-},
-{
-featureType:"water",
-elementType:"geometry",
-stylers:[{color:"#071426"}]
+attribution:'© OpenStreetMap'
 }
-]
+).addTo(map);
+
+L.marker([lat, lng])
+.addTo(map)
+.bindPopup('Votre position')
+.openPopup();
+
+},
+
+(error) => {
+
+locationText.innerHTML =
+"❌ Géolocalisation refusée.";
+
+console.log(error);
 
 }
+
 );
 
-new google.maps.Marker({
-position:userLocation,
-map:map,
-title:'Votre position'
-});
+} else {
 
-});
+locationText.innerHTML =
+"❌ Géolocalisation non supportée.";
 
 }
 
-}
-
-/* =========================
-REQUEST
-========================= */
+});
 
 document.getElementById('requestForm')
 .addEventListener('submit',async(e)=>{
@@ -1059,10 +1009,6 @@ document.getElementById('requestForm').reset();
 
 });
 
-/* =========================
-ARTISAN
-========================= */
-
 document.getElementById('artisanForm')
 .addEventListener('submit',async(e)=>{
 
@@ -1115,10 +1061,6 @@ alert('Inscription envoyée');
 document.getElementById('artisanForm').reset();
 
 });
-
-/* =========================
-REVIEWS
-========================= */
 
 let selectedRating = 0;
 
@@ -1183,10 +1125,6 @@ selectedRating = 0;
 
 }
 
-/* =========================
-LOAD REVIEWS
-========================= */
-
 const reviewsContainer =
 document.getElementById('reviewsContainer');
 
@@ -1224,14 +1162,6 @@ reviewsContainer.innerHTML += `
 
 });
 
-</script>
-
-<!-- =========================
-GOOGLE MAPS
-========================= -->
-
-<script async defer
-src="https://maps.googleapis.com/maps/api/js?key=VOTRE_GOOGLE_MAPS_API_KEY&callback=initMap">
 </script>
 
 </body>
