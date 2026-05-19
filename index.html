@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>TÉEW — Dépannage Rapide</title>
 
@@ -86,13 +88,16 @@ cursor:pointer;
 
 .hero{
 height:92vh;
+
 background:
 radial-gradient(circle at top left,
 rgba(255,183,3,0.12),
 transparent 25%),
+
 radial-gradient(circle at bottom right,
 rgba(255,255,255,0.06),
 transparent 30%),
+
 linear-gradient(
 135deg,
 #020617 0%,
@@ -100,6 +105,7 @@ linear-gradient(
 #0a192f 70%,
 #102544 100%
 );
+
 display:flex;
 justify-content:center;
 align-items:center;
@@ -203,7 +209,6 @@ gap:25px;
 background:white;
 padding:30px;
 border-radius:22px;
-border:1px solid rgba(255,255,255,0.08);
 box-shadow:0 10px 30px rgba(0,0,0,0.08);
 transition:0.3s;
 }
@@ -211,7 +216,6 @@ transition:0.3s;
 .card:hover,
 .review:hover{
 transform:translateY(-8px);
-box-shadow:0 20px 40px rgba(0,0,0,0.15);
 }
 
 .card{
@@ -229,12 +233,6 @@ margin-bottom:15px;
 color:#0b2545;
 }
 
-.card p,
-.review p,
-.form-container p{
-color:#222;
-}
-
 input,
 textarea,
 select{
@@ -245,8 +243,6 @@ border-radius:14px;
 border:1px solid #dce3f0;
 outline:none;
 font-size:15px;
-background:white;
-color:#222;
 transition:0.3s;
 }
 
@@ -267,7 +263,7 @@ overflow:hidden;
 
 .review h4{
 margin-top:15px;
-color:#ffb703;
+color:#0b2545;
 }
 
 .rating{
@@ -297,7 +293,6 @@ color:white;
 padding:35px;
 border-radius:22px;
 text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,0.12);
 }
 
 .contact-card i{
@@ -350,6 +345,7 @@ font-size:32px;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -357,9 +353,11 @@ font-size:32px;
 <header>
 
 <div class="logo">
+
 <img src="logo.png" alt="Logo TÉEW">
 
 <div>
+
 <h2>TÉEW</h2>
 
 <p style="font-size:12px; color:#cbd5e1; margin-top:-5px;">
@@ -367,6 +365,7 @@ Toujours proche quand l’urgence appelle.
 </p>
 
 </div>
+
 </div>
 
 <div class="menu-btn" id="menuBtn">
@@ -374,12 +373,14 @@ Toujours proche quand l’urgence appelle.
 </div>
 
 <nav id="navMenu">
+
 <a href="#services">Services</a>
 <a href="#how">Comment ça marche</a>
 <a href="#request">Demande</a>
 <a href="#artisan">Artisan</a>
 <a href="#avis">Avis</a>
 <a href="#contact">Contact</a>
+
 </nav>
 
 </header>
@@ -415,6 +416,7 @@ TÉEW modernise le dépannage au Sénégal grâce à la géolocalisation et la r
 </section>
 
 <section id="how">
+
 <h2 class="title">Comment ça marche ?</h2>
 
 <div class="grid">
@@ -438,9 +440,11 @@ TÉEW modernise le dépannage au Sénégal grâce à la géolocalisation et la r
 </div>
 
 </div>
+
 </section>
 
 <section id="services">
+
 <h2 class="title">Nos Services</h2>
 
 <div class="grid">
@@ -461,9 +465,11 @@ TÉEW modernise le dépannage au Sénégal grâce à la géolocalisation et la r
 </div>
 
 </div>
+
 </section>
 
 <section>
+
 <h2 class="title">Carte & Géolocalisation</h2>
 
 <div class="form-container">
@@ -475,166 +481,156 @@ Votre position sera détectée automatiquement.
 <div id="map"></div>
 
 </div>
+
 </section>
 
 <section id="request">
+
 <h2 class="title">Demande d’intervention</h2>
 
 <div class="form-container">
 
 <form id="requestForm">
 
-<input type="text" id="name" placeholder="Votre nom" required>
+<input type="text"
+id="name"
+placeholder="Votre nom"
+required>
 
-<input type="tel" id="phone" placeholder="Téléphone" required>
+<input type="tel"
+id="phone"
+placeholder="Téléphone"
+required>
 
-<input type="text" id="quartier" placeholder="Quartier / Adresse" required>
+<input type="text"
+id="quartier"
+placeholder="Quartier / Adresse"
+required>
 
 <select id="service" required>
+
 <option value="">Choisir un service</option>
 <option>Électricité</option>
 <option>Plomberie</option>
 <option>Climatisation</option>
+
 </select>
 
-<textarea id="message" rows="5" placeholder="Décrivez votre problème"></textarea>
+<textarea id="message"
+rows="5"
+placeholder="Décrivez votre problème"></textarea>
 
-<button type="submit">Envoyer la demande</button>
+<button type="submit">
+Envoyer la demande
+</button>
 
 </form>
 
 </div>
+
 </section>
 
 <section id="artisan">
+
 <h2 class="title">Devenir Artisan</h2>
 
 <div class="form-container">
 
 <form id="artisanForm">
 
-<input type="text" id="a_name" placeholder="Nom complet" required>
+<input type="text"
+id="a_name"
+placeholder="Nom complet"
+required>
 
-<input type="tel" id="a_phone" placeholder="Téléphone" required>
+<input type="tel"
+id="a_phone"
+placeholder="Téléphone"
+required>
 
-<input type="text" id="a_zone" placeholder="Quartier / Zone" required>
+<input type="text"
+id="a_zone"
+placeholder="Quartier / Zone"
+required>
 
 <select id="a_job" required>
+
 <option value="">Choisir un métier</option>
+
 <option>Électricien</option>
 <option>Plombier</option>
 <option>Technicien Climatisation</option>
+
 </select>
 
-<textarea id="a_exp" rows="5" placeholder="Votre expérience"></textarea>
+<textarea id="a_exp"
+rows="5"
+placeholder="Votre expérience"></textarea>
 
-<button type="submit">Rejoindre TÉEW</button>
+<button type="submit">
+Rejoindre TÉEW
+</button>
 
 </form>
 
 </div>
-</section>
 
-<section id="avis">
-<h2 class="title">Avis Clients</h2>
-
-<div class="grid" id="reviewsContainer"></div>
-
-<br><br>
-
-<div class="form-container">
-
-<input type="text" id="reviewName" placeholder="Votre nom">
-
-<textarea id="reviewText" placeholder="Votre avis"></textarea>
-
-<div class="rating">
-<i class="fa fa-star" data-rate="1"></i>
-<i class="fa fa-star" data-rate="2"></i>
-<i class="fa fa-star" data-rate="3"></i>
-<i class="fa fa-star" data-rate="4"></i>
-<i class="fa fa-star" data-rate="5"></i>
-</div>
-
-<br>
-
-<button onclick="addReview()">Publier l’avis</button>
-
-</div>
 </section>
 
 <section id="contact">
+
 <h2 class="title">Contact</h2>
 
 <div class="contact-grid">
 
 <div class="contact-card">
-<i class="fas fa-envelope"></i>
-<h3>Email</h3>
-<p>teewservice@gmail.com</p>
-</div>
 
-<div class="contact-card">
 <i class="fas fa-phone"></i>
+
 <h3>WhatsApp / Appel</h3>
+
 <p>+221 75 749 75 92</p>
-</div>
 
-<div class="contact-card">
-<i class="fas fa-location-dot"></i>
-<h3>Zone</h3>
-<p>Disponible à Thiès</p>
 </div>
 
 </div>
+
 </section>
 
 <footer>
-<p>© 2026 TÉEW — Tous droits réservés</p>
+
+<p>
+© 2026 TÉEW — Tous droits réservés
+</p>
+
 </footer>
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-<script type="module">
+<script>
 
-import { initializeApp }
-from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+const menuBtn =
+document.getElementById('menuBtn');
 
-import {
-getFirestore,
-collection,
-addDoc,
-onSnapshot
-}
-from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
-
-const firebaseConfig = {
-apiKey: "AIzaSyBmPfd7vFg3yJTB3ccn9DNfR1EVZ6keZL4",
-authDomain: "teew-fae25.firebaseapp.com",
-projectId: "teew-fae25",
-storageBucket: "teew-fae25.firebasestorage.app",
-messagingSenderId: "818520531218",
-appId: "1:818520531218:web:204bf5ba0a2857be1193cb",
-measurementId: "G-61ER1554X9"
-};
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-
-const menuBtn = document.getElementById('menuBtn');
-const navMenu = document.getElementById('navMenu');
+const navMenu =
+document.getElementById('navMenu');
 
 menuBtn.addEventListener('click',()=>{
+
 navMenu.classList.toggle('active');
+
 });
 
-window.addEventListener('load', () => {
+window.addEventListener('load',()=>{
 
-const locationText = document.getElementById('locationText');
+const locationText =
+document.getElementById('locationText');
 
-if (navigator.geolocation) {
+if(navigator.geolocation){
 
-navigator.geolocation.getCurrentPosition((position) => {
+navigator.geolocation.getCurrentPosition(
+
+(position)=>{
 
 const lat = position.coords.latitude;
 const lng = position.coords.longitude;
@@ -642,7 +638,8 @@ const lng = position.coords.longitude;
 locationText.innerHTML =
 `📍 Position détectée : ${lat.toFixed(5)}, ${lng.toFixed(5)}`;
 
-const map = L.map('map').setView([lat, lng], 15);
+const map =
+L.map('map').setView([lat,lng],15);
 
 L.tileLayer(
 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
@@ -651,75 +648,58 @@ attribution:'© OpenStreetMap'
 }
 ).addTo(map);
 
-L.marker([lat, lng])
+L.marker([lat,lng])
 .addTo(map)
 .bindPopup('Votre position')
 .openPopup();
 
-});
+},
+
+(error)=>{
+
+locationText.innerHTML =
+"❌ Géolocalisation refusée.";
+
+}
+
+);
 
 }
 
 });
 
-// DEMANDE CLIENT
-
 document.getElementById('requestForm')
-.addEventListener('submit', async(e)=>{
+.addEventListener('submit',(e)=>{
 
- e.preventDefault();
+e.preventDefault();
 
- const name = document.getElementById('name').value;
- const phone = document.getElementById('phone').value;
- const quartierInput = document.getElementById('quartier').value;
- const service = document.getElementById('service').value;
- const message = document.getElementById('message').value;
+const name =
+document.getElementById('name').value;
 
- navigator.geolocation.getCurrentPosition(async(position)=>{
+const phone =
+document.getElementById('phone').value;
 
- const lat = position.coords.latitude;
- const lon = position.coords.longitude;
+const quartier =
+document.getElementById('quartier').value;
 
- let quartier = quartierInput;
- let ville = 'Thiès';
+const service =
+document.getElementById('service').value;
 
- try{
+const message =
+document.getElementById('message').value;
 
- const response = await fetch(
- `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${lat}&lon=${lon}`
- );
+navigator.geolocation.getCurrentPosition(
 
- const data = await response.json();
+(position)=>{
 
- quartier =
- data.address.suburb ||
- data.address.neighbourhood ||
- quartierInput;
+const lat = position.coords.latitude;
+const lon = position.coords.longitude;
 
- ville =
- data.address.city ||
- data.address.town ||
- 'Thiès';
+const mapsLink =
+`https://www.google.com/maps?q=${lat},${lon}`;
 
- }catch(error){}
-
- const mapsLink =
- `https://www.google.com/maps?q=${lat},${lon}`;
-
- await addDoc(collection(db,'requests'),{
- name,
- phone,
- service,
- message,
- quartier,
- ville,
- latitude:lat,
- longitude:lon,
- createdAt:new Date()
- });
-
- const whatsappMessage =
- `🚨 NOUVELLE DEMANDE TÉEW
+const whatsappMessage =
+`🚨 NOUVELLE DEMANDE TÉEW
 
 👤 Nom : ${name}
 
@@ -735,53 +715,70 @@ ${message}
 📌 GPS :
 ${mapsLink}`;
 
- window.open(
- `https://wa.me/221757497592?text=${encodeURIComponent(whatsappMessage)}`,
- '_blank'
- );
+window.location.href =
+`https://wa.me/221757497592?text=${encodeURIComponent(whatsappMessage)}`;
 
- alert('Demande envoyée avec succès');
+},
 
- document.getElementById('requestForm').reset();
+(error)=>{
 
- });
+const whatsappMessage =
+`🚨 NOUVELLE DEMANDE TÉEW
+
+👤 Nom : ${name}
+
+📞 Téléphone : ${phone}
+
+🛠️ Service : ${service}
+
+🏘️ Quartier : ${quartier}
+
+📄 Problème :
+${message}
+
+⚠️ Géolocalisation refusée`;
+
+window.location.href =
+`https://wa.me/221757497592?text=${encodeURIComponent(whatsappMessage)}`;
+
+}
+
+);
 
 });
 
-// ARTISAN
-
 document.getElementById('artisanForm')
-.addEventListener('submit', async(e)=>{
+.addEventListener('submit',(e)=>{
 
- e.preventDefault();
+e.preventDefault();
 
- const name = document.getElementById('a_name').value;
- const phone = document.getElementById('a_phone').value;
- const zone = document.getElementById('a_zone').value;
- const job = document.getElementById('a_job').value;
- const exp = document.getElementById('a_exp').value;
+const name =
+document.getElementById('a_name').value;
 
- navigator.geolocation.getCurrentPosition(async(position)=>{
+const phone =
+document.getElementById('a_phone').value;
 
- const lat = position.coords.latitude;
- const lon = position.coords.longitude;
+const zone =
+document.getElementById('a_zone').value;
 
- const mapsLink =
- `https://www.google.com/maps?q=${lat},${lon}`;
+const job =
+document.getElementById('a_job').value;
 
- await addDoc(collection(db,'artisans'),{
- name,
- phone,
- zone,
- job,
- exp,
- latitude:lat,
- longitude:lon,
- createdAt:new Date()
- });
+const exp =
+document.getElementById('a_exp').value;
 
- const artisanMessage =
- `👷 NOUVEL ARTISAN TÉEW
+navigator.geolocation.getCurrentPosition(
+
+(position)=>{
+
+const lat = position.coords.latitude;
+const lon = position.coords.longitude;
+
+const mapsLink =
+`https://www.google.com/maps?q=${lat},${lon}`;
+
+const artisanMessage =
+`👷 NOUVEL ARTISAN TÉEW
 
 👤 Nom : ${name}
 
@@ -797,96 +794,35 @@ ${exp}
 📌 GPS :
 ${mapsLink}`;
 
- window.open(
- `https://wa.me/221757497592?text=${encodeURIComponent(artisanMessage)}`,
- '_blank'
- );
+window.location.href =
+`https://wa.me/221757497592?text=${encodeURIComponent(artisanMessage)}`;
 
- alert('Inscription envoyée avec succès');
+},
 
- document.getElementById('artisanForm').reset();
+(error)=>{
 
- });
+const artisanMessage =
+`👷 NOUVEL ARTISAN TÉEW
 
-});
+👤 Nom : ${name}
 
-// AVIS
+📞 Téléphone : ${phone}
 
-let selectedRating = 0;
+🛠️ Métier : ${job}
 
-const stars = document.querySelectorAll('.rating i');
+🏘️ Quartier : ${zone}
 
-stars.forEach((star)=>{
+📄 Expérience :
+${exp}
 
-star.addEventListener('click',()=>{
+⚠️ Géolocalisation refusée`;
 
-selectedRating = star.dataset.rate;
-
-stars.forEach((s)=>
-s.classList.remove('active'));
-
-for(let i=0;i<selectedRating;i++){
-stars[i].classList.add('active');
-}
-
-});
-
-});
-
-window.addReview = async function(){
-
-const name = document.getElementById('reviewName').value;
-const text = document.getElementById('reviewText').value;
-
-if(name === '' || text === '' || selectedRating === 0){
-alert('Veuillez remplir tous les champs');
-return;
-}
-
-await addDoc(collection(db,'reviews'),{
-name,
-text,
-rating:selectedRating,
-createdAt:new Date()
-});
-
-alert('Avis publié');
-
-document.getElementById('reviewName').value='';
-document.getElementById('reviewText').value='';
-
-stars.forEach((s)=>s.classList.remove('active'));
-
-selectedRating = 0;
+window.location.href =
+`https://wa.me/221757497592?text=${encodeURIComponent(artisanMessage)}`;
 
 }
 
-const reviewsContainer =
-document.getElementById('reviewsContainer');
-
-onSnapshot(collection(db,'reviews'),(snapshot)=>{
-
-reviewsContainer.innerHTML='';
-
-snapshot.forEach((doc)=>{
-
-const review = doc.data();
-
-let starsHtml = '';
-
-for(let i=0;i<review.rating;i++){
-starsHtml += '⭐';
-}
-
-reviewsContainer.innerHTML += `
-<div class="review">
-<p>${review.text}</p>
-<h4>${review.name}</h4>
-<p>${starsHtml}</p>
-</div>
-`;
-
-});
+);
 
 });
 
